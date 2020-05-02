@@ -14,3 +14,25 @@ Uma das diferenças do Javascript é que ele é baseado no contexto, ou seja, se
 - Core Concepts - São conceitos fundamentais, como: I/O não bloqueante, Eventos, Event Loop, Times
 - API's Nativas - São as API'S que já vem com o node como: Criptografia, gerenciamento de arquivos, conexões do DP e do Path.
 - API's de Terceiros - São recursos que a comunidade cria para facilitar uma demanda do node, como: Express, Body Parser, estes módulos externos são gerenciados pelo NPM (Node Package Maneger).
+
+## Primeiro Exemplo com Node
+Criando um servidor node
+
+```
+
+const http = require('http')
+const host = '127.0.0.1'
+const port = '3000'
+
+const server = createServer((req, res) => {
+    res.statusCode = 200
+    res.setHeader('Content-Type', 'text/plain')
+    res.end('Olá Mundo \n Meu Primeiro Script')
+})
+
+server.listen(host, port, () => {
+    console.log(`Server running at http://${host}:
+    ${port}`)
+})
+
+```
